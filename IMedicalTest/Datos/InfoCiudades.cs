@@ -100,8 +100,8 @@ namespace IMedicalTest.Datos
             IEnumerable<ResConsultas> resultados = Contexto.Historicos.OrderByDescending(o => o.Hora).Select(s => new ResConsultas()
             {
                 Ciudad = s.Ciudad.Nombre,
-                Info = "Info"
-
+                Info = "Info",
+                Fecha = s.Hora
             });
           return resultados;
         }
